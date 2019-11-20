@@ -20,5 +20,7 @@ int	ft_atoi(const char *str);
 char	*ft_strrev(char *str);
 void	ft_swap(int *a, int *b);
 int	ft_strlen(char *str);
+void	ft_puchar(char *c);
+void	ft_putstr(const char *str);
 
 #endif
