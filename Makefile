@@ -9,7 +9,7 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): 
-	gcc -I $(HEADER) -c $(SRCS)
+	gcc -Wall -Wextra -Werror $(HEADER) -- $(SRCS)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 

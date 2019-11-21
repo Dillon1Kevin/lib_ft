@@ -3,7 +3,7 @@
 int	ft_atoi(const char *str)		//change this in libft.h too
 {
 	int sign;
-	int res;
+	long long res;
 	int i;
 
 	res = 0;
