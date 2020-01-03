@@ -4,12 +4,10 @@ SRCS = *.c
 
 OBJECTS = *.o
 
-HEADER = libft.h
-
 all: $(NAME)
 
 $(NAME): 
-	gcc -Wall -Wextra -Werror $(HEADER) -- $(SRCS)
+	gcc -Wall -Wextra -Werror -c $(SRCS)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
@@ -20,3 +18,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all fclean clean re

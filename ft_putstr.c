@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "libft.h"
 
 void	ft_putstr(char const *str)
@@ -7,7 +6,7 @@ void	ft_putstr(char const *str)
 
 	i = 0;
 	if (!str)
-		return ;
+		return;
 	while (str[i])
 		write(1, &str[i++], 1);
 }
