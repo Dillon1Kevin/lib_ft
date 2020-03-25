@@ -14,12 +14,14 @@ char    **ft_strsplit(const char *str, char c)
     while(str[i] && ft_isprint(str[i]))
     {
         j = 0;
-        if (!(arr[k] = (char *)malloc(sizeof(char) + 1)))
-            return (NULL);
-        while (str[i] == c)
+        while (str[i] && str[i] == c)
             i++;
-        while (ft_isprint(str[i]) && str[i] != c)
+        if (!(arr[k] = (char *)malloc(sizeof(char))))
+            return (NULL);
+        while (str[i] && str[i] != c)
             arr[k][j++] = str[i++];
+        while (str[i] && str[i] == c)
+            i++;
         arr[k++][j] = '\0';
     }
     arr[k] = NULL;

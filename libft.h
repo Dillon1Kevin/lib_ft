@@ -14,8 +14,7 @@ typedef struct	s_list
 
 
 
-void    ft_dude(char *str);
-
+int     ft_int_len(int n);
 
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
 void	*ft_bzero(void *s, size_t n);
@@ -28,6 +27,7 @@ void    *ft_memalloc(size_t size);
 void    ft_memdel(void **ap);
 
 int	ft_atoi(const char *str);
+char    *ft_itoa(int n);
 char	*ft_strrev(char *str);
 void	ft_swap(int *a, int *b);
 size_t	ft_strlen(const char *str);
@@ -47,6 +47,9 @@ char    *ft_strnstr(const char *s1, const char *s2, size_t l);
 int     ft_strlcat(char *s1, const char *s2, size_t l);
 char    *ft_strdup(const char *s);
 char    *ft_strjoin(const char *s1, const char *s2);
+char    *ft_strsub(const char *s1, unsigned int start, size_t len);
+char    *ft_strtrim(char *s);
+void    ft_putstr_fd(char const *s, int fd);
 
 int     ft_islower(int c);
 int     ft_isalpha(int c);
@@ -64,6 +67,7 @@ void    ft_strclr(char *s);
 void    ft_striter(char *s, void(*f)(char *));
 void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 char    *ft_strmap(const char *s, char (*f)(char));
+char    *ft_strmapi(char const *s, char(*f)(unsigned int, char));
 char    **ft_strsplit(const char *str, char c);
 
 void    ft_putnbr(int n);

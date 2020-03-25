@@ -1,4 +1,6 @@
-int     ft_atoi(char *str)
+#include "libft.h"
+
+int     ft_atoi(const char *str)
 {
     int res;
     int sign;
@@ -7,14 +9,17 @@ int     ft_atoi(char *str)
     i = 0;
     res = 0;
     sign = 1;
-    if (str[i] == '-' || str[i] == '+')
-        if (str[i] == '-')
-            sign = -1;
-    if (str[i] == ' ' || str[i] == '\t')
-            i++;
-    while (str[i] >= '0' && str[i] <= '9')
+    while (str[i])
     {
-        res = (res * 10) + (str[i] - '0');
+        if (str[i] == ' ' || str[i] == '\t')
+            i++;
+        if (str[i] == '-' || str[i] == '+')
+            if (str[i] == '-')
+                sign = -1;
+        while (ft_isdigit(str[i]))
+        {
+            res = (res * 10) + (str[i] - '0');
+        }
         i++;
     }
     return ((int)res * sign);
